@@ -1,0 +1,327 @@
+﻿/* ===============================
+   RESET
+=============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0F0F10;
+    color:#ffffff;
+    line-height:1.7;
+}
+
+/* ===============================
+   NAVIGATION
+=============================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(15,15,16,.9);
+    backdrop-filter:blur(20px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#FF4FA3;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FF4FA3;
+}
+
+/* ===============================
+   HERO
+=============================== */
+
+header{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 8%;
+    background:linear-gradient(135deg,#111111,#2d1022);
+}
+
+header h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+header p{
+    max-width:850px;
+    font-size:22px;
+    color:#d6d6d6;
+    margin-bottom:40px;
+}
+
+.button{
+    background:#FF4FA3;
+    color:white;
+    text-decoration:none;
+    padding:18px 45px;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#e23888;
+    transform:translateY(-5px);
+}
+
+/* ===============================
+   SECTIONS
+=============================== */
+
+section{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:80px 0;
+}
+
+section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.center{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#d5d5d5;
+    font-size:18px;
+}
+
+/* ===============================
+   CARD GRID
+=============================== */
+
+.card-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+/* ===============================
+   CARDS
+=============================== */
+
+.project-card{
+
+    background:#1B1B1D;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    min-height:250px;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#FF4FA3;
+
+}
+
+.project-card h3{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.project-card p{
+
+    font-size:18px;
+
+    color:#d0d0d0;
+
+    margin-top:20px;
+
+}
+
+/* ===============================
+   BADGES
+=============================== */
+
+.pending{
+
+    display:inline-block;
+
+    background:#333;
+
+    color:#FFD2E8;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+.available{
+
+    display:inline-block;
+
+    background:#FF4FA3;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+/* ===============================
+   CLICKABLE CARD
+=============================== */
+
+.card-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===============================
+   FOOTER
+=============================== */
+
+footer{
+
+    margin-top:60px;
+
+    background:#090909;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+footer p{
+
+    color:#bfbfbf;
+
+    margin-top:10px;
+
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media(max-width:900px){
+
+.card-container{
+
+grid-template-columns:1fr;
+
+}
+
+header h1{
+
+font-size:45px;
+
+}
+
+header p{
+
+font-size:18px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+nav ul{
+
+margin-top:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:600px){
+
+header h1{
+
+font-size:34px;
+
+}
+
+section h2{
+
+font-size:30px;
+
+}
+
+.project-card{
+
+padding:25px;
+
+}
+
+}
